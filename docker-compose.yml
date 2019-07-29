@@ -1,0 +1,64 @@
+version: "3.2"
+
+networks:
+  internet:
+    external: true
+services:
+  traefik:
+    image: library/traefik
+    container_name: traefik
+    ports:
+      - "80:80"
+      - "443:443"
+    network_mode: host
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+    command: --docker --insecureSkipVerify=true
+
+  modmail:
+    image: kyb3rr/modmail
+    container_name: modmail
+    environment:
+      - TOKEN=${MODMAIL_TOKEN}
+      - GUILD_ID=${MODMAIL_GUILD_ID}
+      - OWNERS=${MODMAIL_OWNERS}
+      - MONGO_URI=${MONGO_URI}
+      - LOG_URL=${LOG_URL}
+    networks:
+      - internet
+    depends_on:
+      - mongodb
+    restart: unless-stopped
+
+  mongodb:
+    image: library/mongo
+    container_name: mongodb
+    volumes:
+      - ${STORAGE_CONTAINERS}/mongodb:/data/db
+    networks:
+      - internet
+    restart: unless-stopped
+
+  logviewer:
+    labels:
+      - "traefik.frontend.rule=Host:${LOG_URL}"
+      - "traefik.backend=logviewer"
+      - "traefik.docker.network=internet"
+      - "traefik.port=8000"
+    image: konggal/logviwer
+    container_name: logviewer
+    environment:
+      - MONGO_URI=${MONGO_URI}
+      - LOG_URL=${LOG_URL}
+    networks:
+      - internet
+    depends_on:
+      - mongodb
+      - modmail
+    healthcheck:
+      test: curl -sS http://127.0.0.1:8000 || exit 1
+      interval: 5s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped

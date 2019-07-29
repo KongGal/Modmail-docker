@@ -25,7 +25,7 @@ services:
       - GUILD_ID=${MODMAIL_GUILD_ID}
       - OWNERS=${MODMAIL_OWNERS}
       - MONGO_URI=${MONGO_URI}
-      - LOG_URL=${LOG_URL}
+      - "LOG_URL=http://${LOG_URL}"
     networks:
       - internet
     depends_on:
@@ -51,7 +51,7 @@ services:
     container_name: logviewer
     environment:
       - MONGO_URI=${MONGO_URI}
-      - LOG_URL=${LOG_URL}
+      - "LOG_URL=http://${LOG_URL}"
     networks:
       - internet
     depends_on:

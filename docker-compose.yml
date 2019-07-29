@@ -47,7 +47,7 @@ services:
       - "traefik.backend=logviewer"
       - "traefik.docker.network=internet"
       - "traefik.port=8000"
-    image: konggal/logviwer
+    image: kyb3rr/logviewer
     container_name: logviewer
     environment:
       - MONGO_URI=${MONGO_URI}

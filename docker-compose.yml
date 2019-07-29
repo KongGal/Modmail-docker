@@ -15,7 +15,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     restart: unless-stopped
-    command: --docker --insecureSkipVerify=true
+    command: --docker --insecureSkipVerify=true --web
 
   modmail:
     image: kyb3rr/modmail

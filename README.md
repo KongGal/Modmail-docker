@@ -5,6 +5,12 @@ Modmail-docker is using Docker Compose which is a tool for defining and running 
 
 This repo contains a .env file and a docker-compose.yml file which will be used to setup Modmail, Logviewer, Traefik and MongoDB
 
+All support for Modmail and Logviewer should done at their repos
+
+Modmail https://github.com/kyb3r/modmail
+Logviewer https://github.com/kyb3r/logviewer
+or on their support discord server https://discord.gg/etJNHCQ
+
 ### Prerequisites
 
   - Docker
@@ -61,10 +67,10 @@ Now you should have a filled out .env file and a docker network created and all 
 $ dc pull
 ```
 Which will pull the latest version of
-  - Modmail
-  - Logviewer
-  - Traefik
-  - MongoDB
+  - Modmail https://github.com/kyb3r/modmail
+  - Logviewer https://github.com/kyb3r/logviewer
+  - Traefik https://github.com/containous/traefik
+  - MongoDB https://github.com/mongodb/mongo
 
 Now create the docker containers from the images together with infomation from the .env file and docker-compose.yml
 ```sh

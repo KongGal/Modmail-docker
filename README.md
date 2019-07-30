@@ -9,9 +9,10 @@ This repo contains a .env file and a docker-compose.yml file which will be used 
 
   - Docker
   - Docker-compose
+  - Git
 
-Both must be installed prior to setting up Modmail-docker
-Find a guide on how to setup docker and docker-compose for your distribution 
+all 3 must be installed prior to setting up Modmail-docker
+Find a guide on how to setup docker, docker-compose and GIT for your distribution 
 
 ### Quality of life
 Add a alias to your .bashrc

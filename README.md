@@ -7,7 +7,7 @@ This repo contains a .env file and a docker-compose.yml file which will be used 
 
 All support for Modmail and Logviewer should done at their repos
 
-Modmail https://github.com/kyb3r/modmail  
+Modmail kyb3r/modmail  
 Logviewer https://github.com/kyb3r/logviewer  
 or on their support discord server https://discord.gg/etJNHCQ  
 

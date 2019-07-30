@@ -164,4 +164,5 @@ If you want to run a inbox server you have to remove comment from
 ```
 in the docker-composer.yml on line 30
 
-for issues or need of help feel free to create a issue or come poke me on the modmail support discord server
+for issues or need of help with the docker-compose setup feel free to create a issue or come poke me on the modmail support discord server  
+for issues or in need of Modmail or Logivewer create a issue on their repo's or contact them on their discord https://discord.gg/etJNHCQ

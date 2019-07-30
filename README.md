@@ -153,7 +153,7 @@ and your Modmail, Logviewer, Traefik, MongoDB is up to date
 ### Extra
 
 If you want to run a inbox server you have to remove comment from 
-```python
+```
 - MODMAIL_GUILD_ID=${MODMAIL_INBOX_GUILD_ID}
 ```
 in the docker-composer.yml on line 30

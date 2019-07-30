@@ -26,6 +26,8 @@ services:
       - OWNERS=${MODMAIL_OWNERS}
       - MONGO_URI=${MONGO_URI}
       - "LOG_URL=http://${LOG_URL}"
+# Remove the hashtag infront of the next line if you intent to use a inbox server and have defined a guild id for it in .env
+#     - MODMAIL_GUILD_ID=${MODMAIL_INBOX_GUILD_ID}
     networks:
       - internet
     depends_on:

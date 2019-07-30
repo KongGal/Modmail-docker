@@ -1,7 +1,7 @@
 # Modmail-docker
 
 
-Modmail-docker is using Docker Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a Compose file to configure your application's services. Then, using a single command, you create and start all the services from your configuration
+Modmail-docker is using Docker Compose which is a tool for defining and running multi-container Docker applications. With Compose, you use a Compose file to configure your application's services. Then, using a single command, you create and start all the services from your configuration
 
 This repo contains a .env file and a docker-compose.yml file which will be used to setup Modmail, Logviewer, Traefik and MongoDB
 

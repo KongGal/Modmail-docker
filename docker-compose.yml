@@ -6,7 +6,7 @@ networks:
 
 services:
   traefik:
-    image: library/traefik
+    image: library/traefik:1.7-alpine
     container_name: traefik
     ports:
       - "80:80"

@@ -60,7 +60,7 @@ LOG_URL=
 Next step is to create your docker network which the 4 containers will run on with 
 
 ```sh
-$ sudo docker create network internet
+$ sudo docker network create internet
 ```
 Now you should have a filled out .env file and a docker network created and all there is left to do is pull the docker images
 ```sh
